@@ -32,7 +32,7 @@ class MyWebServer(SocketServer.BaseRequestHandler):
     def handle(self):
         self.data = self.request.recv(1024).strip()
 	new_path = self.data.split(" ")[1]
-	
+	print new_path
 	if (new_path[-1] == "/"):
 		new_path += "index.html"
 
